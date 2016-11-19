@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/static/js/main.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+    <div data-role="header">
+    <h1>   Agro Visão   </h1>
+    </div>
+
+
+    <div>
+        <form id="form1" enctype="multipart/form-data" method="post" action="Upload.aspx">
+          <div>
+            <label for="fileToUpload"> Selecione foto </label><br />
+            <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*" capture="camera" />
+          </div>
+          <div id="details"></div>
+          <div>
+            <input type="button" onclick="uploadFile()" value="Upload" />
+          </div>
+          <div id="progress"></div>
+        </form>
+    </div>
+
+
+    <br>
+
+    <div class="embed-responsive embed-responsive-4by3 text-center">
+		<div>
+            <img id="imagem-planta" src="/static/fzea.jpeg"
+            alt="image" align="left" class="img-responsive center-block">
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div>
+      <a href="{{ url_for('resposta') }}">resposta</a>
+    </div>
+
+    <br><br><br><br>
+
+
+    <div data-role="footer">
+        <h1> Equipe Time limit exceeded  </h1>
+    </div>
+</div>
+
+</body>
+</html>
